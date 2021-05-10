@@ -1,19 +1,25 @@
 pipeline {
-    agent any
 
-    stages {
-        stage('Checkout codebase') {
+  environment {
+     app=null
+  }
+
+  agent any
+
+  tools {
+    maven 'Maven 3'
+  }
+  
+  stages {
+        stage('Build') { 
             steps {
-                cleanWs()
-                checkout(scm: [$class: 'GitSCM', branches: [[name:/'master']])
+                sh 'mvn -B -DskipTests clean install' 
             }
         }
-         stage('Build'){
-        steps{
-            sh 'mkdir lib'
-            sh 'cd lib/ ;'
-            sh 'wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0-all.jar'
-            sh 'cd src ; javac -cp "../libjunit-platform-console-standalone-1.7.0-all.jar" CritterFunctionalTest.java'
-        }
-        }
-    }
+       
+   }
+   
+ 
+   
+}   
+
