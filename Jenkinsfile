@@ -2,20 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Checkout codebase') {
             steps {
-                echo 'Hello World from GIT'
+                cleanWs()
+                checkout scm: [$class: 'GitSCM', branches: [[name:/'master']]
             }
         }
-        stage('OI') {
-            steps {
-                echo 'Hello World from GIT'
-            }
+         stage('Build'){
+        steps{
+            sh 'mkdir lib'
+            sh 'cd lib/ ; wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/
+            junit-platform-console-standalone-1.7.0-all.jar'
+            sh 'cd src ; javac -cp "../libjunit-platform-console-standalone-1.7.0-all.jar" CritterFunctionalTest.java'
         }
-        stage('Shup') {
-            steps {
-                echo 'Hello World from GIT'
-            }
         }
     }
-}
