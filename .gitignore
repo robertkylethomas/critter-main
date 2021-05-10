@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HELP.md
 target/
 
@@ -15,3 +16,8 @@ target/
 *.iws
 *.iml
 *.ipr
+=======
+.idea/
+target/
+
+>>>>>>> 09913547a9673ab8ea8d377b10e86c47b541f5f0
