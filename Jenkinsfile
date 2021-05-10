@@ -7,5 +7,15 @@ pipeline {
                 echo 'Hello World from GIT'
             }
         }
+        stage('OI') {
+            steps {
+                echo 'Hello World from GIT'
+            }
+        }
+        stage('Shup') {
+            steps {
+                echo 'Hello World from GIT'
+            }
+        }
     }
 }
