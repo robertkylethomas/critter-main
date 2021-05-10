@@ -1,25 +1,20 @@
 pipeline {
+    environment {
+        app = null
+    }
 
-  environment {
-     app=null
-  }
+    agent any
 
-  agent any
+    tools {
+        maven 'Maven 3'
+    }
 
-  tools {
-    maven 'Maven 3'
-  }
-  
-  stages {
-        stage('Build') { 
+    stages {
+        stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean install' 
+                sh 'mvn -B -DskipTests clean install'
             }
         }
-       
-   }
-   
- 
-   
-}   
+    }
 
+}
