@@ -1,27 +1,9 @@
-<<<<<<< HEAD
 # Critter Chronologer Project Starter
 
 Critter Chronologer a Software as a Service application that provides a scheduling interface for a small business that takes care of animals. This Spring Boot project will allow users to create pets, owners, and employees, and then schedule events for employees to provide services for pets.
 
 
 ## Getting Started
-=======
-# Critter Chronologer Project
-Udacity Java Developer Nanodegree Project 3
-
-## Purpose
-Critter Chronologer is a Software as a Service application that provides a scheduling interface for a small business that takes care of animals. This Spring Boot project will allow users to create pets, owners, and employees, and then schedule events for employees to provide services for pets.
-
-This project required utilizing data persistence concepts including:
-
-  *  Structuring Data in a Multitier Architeture
-  *  Using the Java Persistence API (JPA)
-  *  Connecting to multiple data sources
-  *  Persistence using SQL and Data Access Objects
-  *  Solve persistence performance issues
-
-### [Project Starter Code and Instructions](https://github.com/udacity/nd035-c3-data-stores-and-persistence-project-starter)
->>>>>>> 09913547a9673ab8ea8d377b10e86c47b541f5f0
 
 ### Dependencies
 
@@ -31,62 +13,6 @@ This project required utilizing data persistence concepts including:
 * [MySQL Server 8](https://dev.mysql.com/downloads/mysql/) (or another standalone SQL instance)
 * [Postman](https://www.getpostman.com/downloads/)
 
-<<<<<<< HEAD
-Part of this project involves configuring a Spring application to connect to an external data source. Before beginning this project, you must install a database to connect to. Here are [instructions for installing MySQL 8](https://dev.mysql.com/doc/refman/8.0/en/installing.html).
-
-You should install the Server and Connector/J, but it is also convenient to install the Documentation and Workbench.
-
-Alternately, you may wish to run MySQL in a docker container, using [these instructions](https://hub.docker.com/_/mysql/).
-
-After installing the Server, you will need to create a user that your application will use to perform operations on the server. You should create a user that has all permissions on localhost using the sql command found [here](https://dev.mysql.com/doc/refman/8.0/en/creating-accounts.html).
-
-Another SQL database may be used if desired, but do not use the H2 in-memory database as your primary datasource.
-
-### Installation
-
-1. Clone or download this repository.
-2. Open IntelliJ IDEA.
-3. In IDEA, select `File` -> `Open` and navigate to the `critter` directory within this repository. Select that directory to open.
-4. The project should open in IDEA. In the project structure, navigate to `src/main/java/com.udacity.jdnd.course3.critter`. 
-5. Within that directory, click on CritterApplication.java and select `Run` -> `Debug CritterApplication`. 
-6. Open a browser and navigate to the url: [http://localhost:8082/test](http://localhost:8082/test)
-
-You should see the message "Critter Starter installed successfully" in your browser.
-
-## Testing
-
-Once you have completed the above installation, you should also be able to run the included unit tests to verify basic functionality as you complete it. To run unit tests:
-
-1. Within your project in IDEA, Navigate to `src/test/java/com.udacity.jdnd.course3.critter`.
-2. Within that directory, click on `CritterFunctionalTest.java` and select `Run` -> `Run CritterFunctionalTest`.
-
-A window should open showing you the test executions. All 9 tests should fail and if you click on them they will show `java.lang.UnsupportedOperationeException` as the cause.
-
-As you complete the objectives of this project, you will be able to verify progress by re-running these tests.
-
-### Tested Conditions
-Tests will pass under the following conditions:
-
-* `testCreateCustomer` - **UserController.saveCustomer** returns a saved customer matching the request
-* `testCreateEmployee` - **UserController.saveEmployee** returns a saved employee matching the request
-* `testAddPetsToCustomer` - **PetController.getPetsByOwner** returns a saved pet with the same id and name as the one saved with **UserController.savePet** for a given owner
-* `testFindPetsByOwner` - **PetController.getPetsByOwner** returns all pets saved for that owner.
-* `testFindOwnerByPet` - **UserController.getOwnerByPet** returns the saved owner used to create the pet.
-* `testChangeEmployeeAvailability` - **UserController.getEmployee** returns an employee with the same availability as set for that employee by **UserControler.setAvailability**
-* `testFindEmployeesByServiceAndTime` - **UserController.findEmployeesForService** returns all saved employees that have the requested availability and skills and none that do not
-* `testSchedulePetsForServiceWithEmployee` - **ScheduleController.createSchedule** returns a saved schedule matching the requested activities, pets, employees, and date
-* `testFindScheduleByEntities` - **ScheduleController.getScheduleForEmployee** returns all saved schedules containing that employee. **ScheduleController.getScheduleForPet** returns all saved schedules for that pet. **ScheduleController.getScheduleForCustomer** returns all saved schedules for any pets belonging to that owner.
-
-### Postman
-In addition to the included unit tests, a Postman collection has been provided. 
-
-1. Open Postman.
-2. Select the `Import` button.
-3. Import the file found in this repository under `src/main/resource/Udacity.postman_collection.json`
-4. Expand the Udacity folder in postman.
-
-Each entry in this collection contains information in its `Body` tab if necessary and all requests should function for a completed project. Depending on your key generation strategy, you may need to edit the specific ids in these requests for your particular project.
-=======
 ### Resources
 
 #### Spring.io
@@ -147,7 +73,6 @@ Each entry in this collection contains information in its `Body` tab if necessar
 * [HowToDoInJava.com - JUnit 5 Expected Exception – assertThrows() Example](https://howtodoinjava.com/junit5/expected-exception-example/)
 * [admfactory.com - Get and Set Field Value using Reflection in Java](https://www.admfactory.com/get-and-set-field-value-using-reflection-in-java/)
 * [attacomsian.com - Capitalize the first letter of a string in Java](https://attacomsian.com/blog/capitalize-first-letter-of-string-java)
->>>>>>> 09913547a9673ab8ea8d377b10e86c47b541f5f0
 
 ## Built With
 
@@ -158,8 +83,4 @@ Each entry in this collection contains information in its `Body` tab if necessar
 
 ## License
 
-<<<<<<< HEAD
 This project is licensed under the MIT License - see the [LICENSE.md]()
-=======
-This project is licensed under the [MIT License](https://mit-license.org/)
->>>>>>> 09913547a9673ab8ea8d377b10e86c47b541f5f0
